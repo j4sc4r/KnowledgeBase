@@ -60,14 +60,15 @@ firewall-cmd --permanent --add-service=http
 
 ## Close a port/service in firewalld
 ```bash
-firewall-cmd --remove-port=port-number/port-type
+firewall-cmd --remove-port=80/tcp
 ```
 
 ## Reload firewall
 ```bash
 firewall-cmd --reload
 ```
-**or**
+
+## Make temporary changes permanent 
 ```bash
 firewall-cmd --runtime-to-permanent
 ```
