@@ -1,7 +1,6 @@
 # Firewalld
 Firewalld is the standard firewall service in the fedora linux enviroment.
-> [!attention]
-> all commands are executed as root
+> [!attention] All commands are executed as root
 
 ## Check availability
 ```bash
@@ -74,3 +73,31 @@ firewall-cmd --runtime-to-permanent
 ```
 
 ## Firewall zones 
+
+Zones categorize network interfaces and apply predefined security policies to regulate incoming and outgoing traffic, facilitating network segmentation and tailored security configurations.
+
+### Preconfigured zones 
+
+| Zone        | Explaination        |
+| ----------- | ------------------- |
+| Internal Zone |  for trustworthy internal networks |
+| DMZ zone | for demilitarised zones with restricted access to internal resources.|
+| Public Zone | for public networks |
+
+### Create custom zones 
+
+```bash
+firewall-cmd --permanent --zone=<name> --add-rule=<rules>
+```
+
+### List zones
+
+```bash
+firewall-cmd --list-all-zones
+```
+
+For only show a specific zone configuration
+
+```bash
+firewall-cmd --zone=<name> --list-all
+```
