@@ -12,7 +12,7 @@
 
 ## Network topography
 
-![[homelab_overview | {width=200%}]] 
+![[homelab_overview | width=200%]]
 
 ## Services in the VMs
 
