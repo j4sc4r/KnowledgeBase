@@ -394,7 +394,7 @@ Beim Einrichten eines VPN-Gateways müssen Sie den VPN-Typ angeben (richtlinienb
 
 - ist ein Hostingdienst für DNS-Domänen, der eine Namensauflösung mittels Microsoft Azure-Infrastruktur bietet
 
-### Vorteile ovn Azure DNS
+### Vorteile von Azure DNS
 
 - Zuverlässigkeit und Leistung
 	- Domains werden im globalen Azure-Netzwerk von Domänennamenservern gehostet und bieten Resilienz und Hochverfügbarkeit
