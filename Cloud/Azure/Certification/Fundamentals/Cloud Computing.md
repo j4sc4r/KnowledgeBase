@@ -22,9 +22,9 @@ Aufgaben des Cloud Anbieters:
 - Das physische Netzwerk
 
 Aufgaben des Benutzers:
-- Die Informationen und Daten, die in der Cloud gespeichert sind
-- Geräte, die eine Verbindung mit Ihrer Cloud herstellen dürfen (Mobiltelefone, Computer usw.)
-- Die Konten und Identitäten der Personen, Dienste und Geräte innerhalb Ihrer Organisation
+- Verwaltung Daten in der Cloud
+- Verwaltung Geräte mit Cloudverbindung
+- Verwaltung von Konten und Identitäten der Personen, Dienste und Geräte innerhalb der Organisation
 
 Situationsbedingte Aufgaben:
 - Wenn der Cloudanbieter die SQL Datenbank hostet ist er fuer die Verwaltung verantwortlich, aber der Benutzer ist immernoch fuer die Daten verantwortlich
@@ -61,7 +61,7 @@ In Multi-Cloud-Szenarien werden mehrere öffentliche Cloudanbieter verwendet. In
 
 ## Verbrauchsbasiertes Modell
 
-Beim Cloud Computing fallen für die physische Infrastruktur, Strom, Sicherheit oder andere Wartungsaspekte eines Rechenzentrums keine Kosten an. Stattdessen bezahlen Sie für die IT-Ressourcen, die Sie verbrauchen. Wenn Sie einen Monat lang keine IT-Ressourcen nutzen, bezahlen Sie auch nicht dafür.
+Beim Cloud Computing fallen für die physische Infrastruktur, Strom, Sicherheit oder andere Wartungsaspekte eines Rechenzentrums keine Kosten an. Stattdessen bezahlt man für die IT-Ressourcen, die verbraucht werden. Wenn Sie einen Monat lang keine IT-Ressourcen nutzen, bezahlen Sie auch nicht dafür.
 
 Vorteile:
 - Keine Vorlaufkosten

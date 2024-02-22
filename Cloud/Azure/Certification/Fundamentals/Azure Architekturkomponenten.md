@@ -2,12 +2,14 @@
 
 ## Was ist Microsoft Azure
 
-Azure ist ein Portfolio mit Clouddiensten. Mit Azure können Sie Anwendungen in einem umfassenden globalen Netzwerk mit Ihren bevorzugten Tools und Frameworks erstellen, verwalten und bereitstellen.
+- Azure ist ein Portfolio mit Clouddiensten
+- Anwendungen koennen mit Tools und Frameworks global Bereitgestellt werden
 
 ## Azure Konten
 
 - Ist die erste Instanz um mit Azure zu Arbeiten
-- Mit einem Azure Konto kann man mehrere Abonnements beginnen und in diesen Abonnements die Ressourcen erstellen
+- Mit einem Azure Konto koennen mehrere Abonnements erstellt werden
+- In den Abonnements werden die Ressourcen dediziert bereitgestellt
 
 ![[Azure_Konto.png]]
 
@@ -21,12 +23,12 @@ Azure ist ein Portfolio mit Clouddiensten. Mit Azure können Sie Anwendungen in 
 
 ## Azure physische Infrastruktur
 
-- Azure Rechenzentren werden in Azure-Regionen und Azure-Verfuegbarkeitszonen gruppiert
+- Rechenzentren werden in Azure-Regionen und Azure-Verfuegbarkeitszonen gruppiert
 
 ### Azure-Regions
 
 - geografischer Bereich auf der Erde
-- mind. eins aber moeglicherweise mehr Rechenzentren die nicht weit voneinander entfernt und uber low-latency Netzwerk verbunden sind
+- mind. eins aber moeglicherweise mehr Rechenzentren mit low-latency Netzwerkverbindung
 - einige Dienste stehen nur in einigen Regionen zur verfuegung
 
 ### Verfuergbarkeitszonen
@@ -39,7 +41,7 @@ Azure ist ein Portfolio mit Clouddiensten. Mit Azure können Sie Anwendungen in 
 
 #### Verwendung von Verfuegbarkeitszonen in Apps
 
-- gedacht fuer Hochverfuegbarkeitsloesungen
+- Gedacht fuer Hochverfuegbarkeitsloesungen
 
 Azure-Dienste, die Verfügbarkeitszonen unterstützen, können in drei Kategorien unterteilt werden:
 
@@ -49,25 +51,27 @@ Azure-Dienste, die Verfügbarkeitszonen unterstützen, können in drei Kategorie
 
 ### Azure-Regionspaare
 
-Azure-Regionen werden mit einer anderen Region, die mindestens 480 km (300 Meilen) entfernt ist, innerhalb derselben Geografie (z. B. USA, Europa oder Asien) kombiniert.
+Azure-Regionen werden mit einer anderen Region, die mindestens 480 km entfernt ist, innerhalb derselben Geografie (z. B. USA, Europa oder Asien) kombiniert.
 
 Vorteile: 
-- Ermoeglicht Replikationen von Ressourcen innerhalb eienr Geografie
+- Ermoeglicht Replikationen von Ressourcen innerhalb einer Geografie
 - gleichzeitige Verringerung der Wahrscheinlichkeit das Naturkatastrophen oder Stromausfaelle eine gesamte Region treffen
 - automatischen Failover von dem einen Regionspaar zum anderen (Muss vom Kunden konfiguriert werden)
 
 ![[Azure_Region_Pair.png]]
 
 Weitere Vorteile:
-- Bei einem umfangreichen Ausfall von Azure wird eine Region aus jedem Paar priorisiert, um sicherzustellen, dass mindestens eine Region für Anwendungen, die in diesem Regionspaar gehostet werden, so schnell wie möglich wiederhergestellt wird.
-- Geplante Azure-Updates werden nacheinander in den Regionen eines Paars eingeführt, um Ausfallzeiten und das Risiko von Anwendungsausfällen zu minimieren.
+- Bei umfrangreichen Ausfall wird ein paar Priorisiert um die Ressourcen schnellstmoeglich online zu bringen
+- Azure-Updates werden nacheinander in den Regionspaaren installiert um ausfallsicherheit zu gewaehrleisten
 - Die Daten bleiben aus steuerlichen und rechtlichen Gründen innerhalb derselben Geografie wie ihr Paar (mit Ausnahme von „Brasilien, Süden“).
 
 Die meisten Regionen sind in zwei Richtungen gekoppelt. Zum Beispiel sichert US East, US West und auch umgekehrt. Einige Regionen werden aber auch nur in eine Richtung gesichert.
 
 ### Unabhaengige Regionen
 
-Neben den regulären Regionen verfügt Azure auch über unabhängige Regionen (Sovereign Regions). Unabhängige Regionen sind Instanzen von Azure, die von der Hauptinstanz von Azure isoliert sind. Unabhängige Regionen müssen Sie möglicherweise für Compliance- oder rechtliche Zwecke verwenden.
+- Azure hat auch unabhaengige Regionen
+- Sind von der Haup-Azure-Instanz isoliert 
+- Werden fuer Compliance- oder rechtliche Zwecke benutzt
 
 ## Azure Verwaltungsinfrastruktur
 
@@ -75,7 +79,7 @@ Die Verwaltungsinfrastruktur umfasst Azure-Ressourcen sowie Ressourcengruppen, A
 
 ### Azure-Ressourcen und -Ressourcengruppen
 
-Azure Ressourcen ist alles was sie bereitstellen wie z.B. VMs, virtuelle Netzwerke und Datenbanken. 
+Azure Ressourcen sind alles was bereitgestellt wird wie z.B. VMs, virtuelle Netzwerke und Datenbanken. 
 
 Ressourcengruppen sind einfach nur Gruppierungen von Ressourcen.
 
@@ -90,15 +94,17 @@ Ressourcengruppen sind einfach nur Gruppierungen von Ressourcen.
 
 ### Azure-Abonnements
 
-Ein Abonnement bietet authentifizierten und autorisierten Zugriff auf Azure-Produkte und -Dienste. Darüber hinaus ermöglicht es Ihnen die Bereitstellung von Ressourcen. Ein Azure-Abonnement verweist auf ein Azure-Konto, bei dem es sich um eine Identität in Microsoft Entra ID oder einem Verzeichnis handelt, dem Microsoft Entra ID vertraut.
+- Bietet authentifizierten und autorisierten Zugriff auf Azure-Produkte
+- Ermöglicht die Bereitstellung von Ressourcen
+- Verweist auf ein Azure-Konto bei dem es sich um eine Identität in Microsoft Entra ID oder einem Verzeichnis handelt, dem Microsoft Entra ID vertraut
 
 ![[Azure_Subscription.png]]
 
-- Ein Konto kann mehrere Abonnements umfassen, es ist jedoch nur ein Konto erforderlich
-- Koennen mehrere Abrechnungsmodelle und Zugriffsverwaltungsrichtlinien konfiguriert werden
+- Ein Konto kann mehrere Abonnements umfassen
+	- Es koennen mehrere Abrechnungsmodelle und Zugriffsverwaltungsrichtlinien konfiguriert werden
 - koennen Grenzen fuer Produkte, Dienste und Ressourcen definiert werden
 
-Es gibt zwei Arten von Abonnementgrenzen zu Verfuegung:
+Es gibt zwei Arten von Abonnementgrenzen:
 - Abrechungsgrenzen
 	- wird bestimmt, wie die Nutzung von Azure einem Azure-Konto in Rechnung gestellt wird
 	- mehrere Abonnements fuer verschiedene Arten von Abrechungsanforderungen
@@ -110,12 +116,14 @@ Es gibt zwei Arten von Abonnementgrenzen zu Verfuegung:
 
 ### Azure-Verwaltungsgruppen
 
-Azure-Verwaltungsgruppen stellen einen abonnementübergreifenden Bereich dar. Sie organisieren Abonnements in Containern, die als Verwaltungsgruppen bezeichnet werden, und wenden Ihre Governancebedingungen auf die Verwaltungsgruppen an.
+- Stellen einen abonnementübergreifenden Bereich dar
+- organisieren Abonnements in Containern und wenden Governancebedingungen an
 
 ![[Azure_Management_Groups.png]]
 
-- Abonnements innerhalb einer Verwaltungsgruppe erben automatisch die Bedingungen, die auf die Verwaltungsgruppe angewandt wurden, ebenso erben Ressourcengruppen die Einstellungen von Abonnements und Ressourcen die von Ressourcengruppen
-- 10.000 Verwaltungsgruppen können in einem einzigen Verzeichnis unterstützt werden
-- Eine Verwaltungsgruppenstruktur kann bis zu sechs Ebenen unterstützen. Hierbei werden die Stammebene und die Abonnementebene nicht mitgezählt
+Abonnements innerhalb einer Verwaltungsgruppe erben automatisch die Bedingungen, die auf die Verwaltungsgruppe angewandt wurden, ebenso erben Ressourcengruppen die Einstellungen von Abonnements und Ressourcen die von Ressourcengruppen.
+
+- 10.000 Verwaltungsgruppen werden pro Verzeichnis unterstuetzt
+- Eine Verwaltungsgruppenstruktur unterstuetzt bis zu sechs Ebenen (Ohne Stamm- und Abonnementebene)
 - Jede Verwaltungsgruppe und jedes Abonnement kann nur über ein übergeordnetes Element verfügen
 

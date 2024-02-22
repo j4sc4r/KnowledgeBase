@@ -25,8 +25,6 @@ Redundanzoptionen:
 
 ### Speicherkontoendpunkte
 
-Vorteil eines Azure Storage-Kontos besteht darin, einen eindeutigen Namespace in Azure für Ihre Daten zu besitzen.
-
 - Speicherkonto benoetigt eindeutigen Kontonamen
 - Kontoname + Azure Storage-Dienstpunkt bildet die Endpunkte fuer ihr Speicherkonto
 
@@ -50,7 +48,7 @@ Regeln bei der Benennung:
 - speichert immer mehrere Kopien der Daten
 - lokal redundanten Speicher (LRS) und dem zonenredundanten Speicher (ZRS) sind zwei Optionen für die Replikation der Daten in der primären Region
 
-### Lokal redundanter Speicher
+### Lokal redundanter Speicher (LRS)
 
 - Daten innerhalb eines einzelnen Rechenzentrums in der primären Region repliziert
 - bietet eine Dauerhaftigkeit von mindestens elf Neunen (99,999999999 Prozent)
@@ -59,26 +57,28 @@ Regeln bei der Benennung:
 
 ![[Azure_LRS.png]]
 
-### Zonenredundanter Speicher
+### Zonenredundanter Speicher (ZRS)
 
-- repliziert der zonenredundante Speicher (ZRS) Ihre Azure Storage-Daten synchron in drei Azure-Verfügbarkeitszonen in der primären Region
+- repliziert Azure Storage-Daten synchron in drei Azure-Verfügbarkeitszonen in der primären Region
 - bietet eine Dauerhaftigkeit von mindestens zwölf Neunen (99,9999999999 %)
 - keine Neueinbindung von Azure-Dateifreigaben auf den verbundenen Clients erforderlich
 - Empfehlung fuer High Availability
 
 ![[Azure_ZRS.png]]
 
-### Georedundanter Speicher
+### Georedundanter Speicher (GRS)
 
-- erstellt mit LRS drei synchrone Kopien Ihrer Daten in primären Region, Anschließend werden Daten mithilfe des LRS asynchron an die sekundären Region (Regionspaar) kopiert
+- erstellt mit LRS drei synchrone Kopien Ihrer Daten in primären Region
+- Daten werden mithilfe des LRS asynchron an die sekundären Region (Regionspaar) kopiert
 - bietet eine Dauerhaftigkeit von mindestens 16 Neunen (99,99999999999999 %)
 
 ![[Azure_GRS.png]]
 
-### Geozonenredundanter Speicher
+### Geozonenredundanter Speicher (GZRS)
 
 - kombiniert die Hochverfügbarkeit durch die verfügbarkeitszonenübergreifende Redundanz mit dem Schutz vor regionalen Ausfällen, der durch die Georeplikation geboten wird
-- werden über drei Azure-Verfügbarkeitszonen in die primäre Region kopiert (ähnlich wie beim ZRS) und zum Schutz vor regionalen Notfällen mithilfe des LRS auch in eine sekundäre geografische Region repliziert
+- werden über drei Azure-Verfügbarkeitszonen in die primäre Region kopiert (wie ZRS)
+- zum Schutz vor regionalen Notfällen mithilfe des LRS auch in eine sekundäre geografische Region repliziert
 - Dauerhaftigkeit von mindestens 16 Neunen (99,99999999999999 %)
 - Regonenuebergreifend nur Read-Only wenn Failover abgeschlossen
 - Wenn Daten in sekundaerer Region immer lesbar sein sollen --> RA-GRS und RA-GZRS
@@ -87,11 +87,17 @@ Regeln bei der Benennung:
 
 ## Azure-Speicherdienste
 
-- **Azure-Blobs**: Ein überaus skalierbarer Objektspeicher für Text- und Binärdaten. Er verfügt auch über Unterstützung für Big Data-Analysen mit Data Lake Storage Gen2
-- **Azure Files**: Verwaltete Dateifreigaben für Bereitstellungen lokal oder in der Cloud
-- **Azure-Warteschlangen**: Ein Messagingspeicher für zuverlässiges Messaging zwischen Anwendungskomponenten
-- **Azure-Datenträger**: Speichervolumes auf Blockebene für virtuelle Azure-Computer
-- **Azure Tables:** NoSQL-Tabellenoption für strukturierte, nicht relationale Daten
+- Azure-Blobs
+	- skalierbarer Objektspeicher für Text- und Binärdaten
+	- verfügt über Unterstützung für Big Data-Analysen mit Data Lake Storage Gen2
+- Azure Files
+	- Verwaltete Dateifreigaben für Bereitstellungen lokal oder in der Cloud
+- Azure-Warteschlangen
+	- Ein Messagingspeicher für zuverlässiges Messaging zwischen Anwendungskomponenten
+- Azure-Datenträger
+	- Speichervolumes auf Blockebene für virtuelle Azure-Computer
+- Azure Tables
+	- NoSQL-Tabellenoption für strukturierte, nicht relationale Daten
 
 Vorteile von Azure Storage:
 
@@ -169,8 +175,9 @@ Fuer folgende Zwecke Ideal:
 
 ### Azure-Disks
 
-- sind Speichervolumes auf Blockebene, die von Azure für die Verwendung mit Azure-VMs verwaltet werden
-- gleichen einem physischen Datenträger, aber sie sind virtualisiert und bieten so eine höhere Ausfallsicherheit und Verfügbarkeit
+- sind Speichervolumes auf Blockebene
+- werden von Azure-VMs als Speicherebene benutzt
+- gleichen einem physischen Datenträger, aber sind virtualisiert und bieten so eine höhere Ausfallsicherheit und Verfügbarkeit
 
 ### Azure-Tabellen
 
@@ -184,24 +191,31 @@ Fuer folgende Zwecke Ideal:
 - Vereinheitlichte Migrationsplattform
 	- Ein einzelnes Portal zum Starten, Ausführen und Nachverfolgen Ihrer Migration zu Azure
 - Verfügbare Tools
-	- Eine Reihe von Tools für Bewertung und Migration. Zu Azure Migrate-Tools zählen „Azure Migrate: Ermittlung und Bewertung“ und „Azure Migrate: Servermigration“. Azure Migrate kann auch in andere Azure-Dienste und -Tools sowie Angebote von unabhängigen Softwareanbietern (Independent Software Vendors, ISVs) integriert werden.
+	- Eine Reihe von Tools für Bewertung und Migration
+	- Azure Migrate: Ermittlung und Bewertung
+	- Azure Migrate: Servermigration
+	- Azure Migrate kann auch in andere Azure-Dienste und -Tools sowie Angebote von unabhängigen Softwareanbietern (Independent Software Vendors, ISVs) integriert werden.
 - Bewertung und Migration
-	- Im Azure Migrate-Hub können Sie Ihre lokale Infrastruktur bewerten und zu Azure migrieren.
+	- Azure Migrate-Hub kann lokale Infrastruktur bewerten und zu Azure migrieren.
 
 Integrierte Tools:
 
 - Azure Migrate: Ermittlung und Bewertung
-	- Als Vorbereitung für die Migration zu Azure werden lokale Server ermittelt und bewertet, die unter VMware, Hyper-V und auf physischen Servern ausgeführt werden.
+	- Als Vorbereitung für die Migration zu Azure werden lokale Server ermittelt und bewertet, die unter VMware, Hyper-V und auf physischen Servern ausgeführt werden
 - Azure Migrate: Servermigration
-	- VMware-VMs, Hyper-V-VMs, physische Server und andere virtualisierte Server und VMs der öffentlichen Cloud werden zu Azure migriert.
+	- VMware-VMs, Hyper-V-VMs, physische Server und andere virtualisierte Server und VMs der öffentlichen Cloud werden zu Azure migriert
 - Datenmigrations-Assistent
-	- Der Datenmigrations-Assistent ist ein eigenständiges Tool zur Bewertung von SQL Server-Instanzen. Ermöglicht die Ermittlung möglicher Probleme, die einer Migration im Wege stehen können. Er identifiziert nicht unterstützte Features, neue Features, von denen Sie nach der Migration profitieren können, sowie den richtigen Pfad für die Datenbankmigration.
+	- eigenständiges Tool zur Bewertung von SQL Server-Instanzen
+	- ermöglicht die Ermittlung möglicher Probleme, die einer Migration im Wege stehen können
+	- identifiziert nicht unterstützte Features, neue Features
+	- ermittelt den richtigen Pfad für die Datenbankmigration
 - Azure Database Migration Service
-	- Migrieren Sie lokale Datenbanken zu Azure-VMs, auf denen SQL Server, Azure SQL-Datenbank oder verwaltete Azure SQL-Instanzen ausgeführt werden.
+	- Migrieren von lokalen Datenbanken zu Azure-VMs, auf denen SQL Server, Azure SQL-Datenbank oder verwaltete Azure SQL-Instanzen ausgeführt werden
 - Azure App Service-Migrationsassistent
-	- Der Azure App Service-Migrationsassistent ist ein eigenständiges Tool, mit dem lokale Websites für die Migration zu Azure App Service bewertet werden können. Verwenden Sie den Migrations-Assistenten zum Migrieren von .NET- und PHP-Web-Apps zu Azure.
+	- eigenständiges Tool, mit dem lokale Websites für die Migration zu Azure App Service bewertet werden können
+	- zum Migrieren von .NET- und PHP-Web-Apps zu Azure
 - Azure Data Box
-	- Verschieben Sie große Mengen an Offlinedaten mit Azure Data Box-Produkten zu Azure.
+	- Verschieben Sie große Mengen an Offlinedaten mit Azure Data Box-Produkten zu Azure
 
 ### Azure Data Box
 
@@ -223,12 +237,12 @@ Integrierte Tools:
 
 ### Azure-Dateisynchronisierung
 
-- Tool zur Zentralisierung Ihrer Dateifreigaben in Azure Files bei gleichzeitiger Flexibilität, Leistung und Kompatibilität eines Windows-Dateiservers
-- Nach Installation erfolgt automatisch eine permanente bidirektionale Synchronisierung mit Ihren Dateien in Azure
+- Tool zur Zentralisierung von Dateifreigaben in Azure Files bei gleichzeitiger Flexibilität, Leistung und Kompatibilität eines Windows-Dateiservers
+- Nach Installation erfolgt automatisch eine permanente bidirektionale Synchronisierung mit Dateien in Azure
 
 #### Vorteile 
 
 - mit beliebigen Protokoll auf Daten zugreifen
 - weltweit so viele Caches wie nötig nutzen
-- fehlerhaften lokalen Server ersetzen, indem Sie die Azure-Dateisynchronisierung auf einem neuen Server im gleichen Rechenzentrum installieren
+- fehlerhaften lokalen Server ersetzen, indem die Azure-Dateisynchronisierung auf einem neuen Server im gleichen Rechenzentrum installiert wird
 - Cloudtiering konfigurieren, damit Dateien, auf die am häufigsten zugegriffen wird, lokal repliziert werden, während selten genutzte Dateien in der Cloud bleiben, bis sie angefordert werden

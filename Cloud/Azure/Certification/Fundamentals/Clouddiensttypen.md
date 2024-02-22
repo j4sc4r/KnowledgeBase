@@ -6,13 +6,13 @@ Erweiterung zu den Clouddiensttypen (Erwaehnt in [[Cloud Computing]]).
 
 Eigenschaften:
 - größtmögliche Kontrolle über Cloudressourcen
-- Cloudanbieter ist für die Hardware, die Netzwerkkonnektivität (mit dem Internet) und die physische Sicherheit verantwortlich
+- Cloudanbieter ist für die Hardware, die Netzwerkkonnektivität und die physische Sicherheit verantwortlich
 - Benutzer ist fuer alles andere Verantwortlich
 
 ## Platform-as-a-Service (PaaS)
 
 Eigenschaften:
-- Mittelweg zwischen dem Mieten von Speicherplatz in einem Rechenzentrum (IaaS) und dem Kauf einer vollständigen und bereitgestellten Lösung (SaaS)
+- Mittelweg zwischen dem Mieten von Speicherplatz (IaaS) und dem Kauf einer vollständigen und bereitgestellten Lösung (SaaS)
 - Cloudanbieter verwaltet die physische Infrastruktur, die physische Sicherheit und die Verbindung mit dem Internet
 - ist außerdem für Betriebssysteme, Middleware, Entwicklungstools und Business Intelligence-Dienste zuständig
 - bietet eine vollständige Entwicklungsumgebung, ohne dass Sie die gesamte Entwicklungsinfrastruktur verwalten müssen
