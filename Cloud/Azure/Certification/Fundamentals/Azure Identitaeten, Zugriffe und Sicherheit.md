@@ -192,7 +192,7 @@ Ist ein Überwachungstool für die Verwaltung des Sicherheitsstatus und den Bedr
 
 ### Schutz fuer jede Bereitstellung
 
-- nativer Azure-Dienst ist so werden viele Azure-Dienste überwacht und geschützt
+- nativer Azure-Dienst so werden viele Azure-Dienste überwacht und geschützt
 - automatische Bereitstellungen eines Log Analytics-Agent, um sicherheitsbezogene Daten zu sammeln im lokalen Rechenzentrum
 - Bei Hybrid- und Multicloud wird mithilfe von Azure Arc und Nicht-Azure-Computer  der Defender ausgeweitet
 - In der Cloud sind CSPM-Features (Cloud Security Posture Management) ohne Agent moeglich
@@ -200,7 +200,7 @@ Ist ein Überwachungstool für die Verwaltung des Sicherheitsstatus und den Bedr
 ### Nativer Azure-Schutz
 
 - Azure-PaaS-Dienste
-	- erkennt bedorhen die auf die PaaS Dienste abzielen
+	- erkennt bedrohungen die auf die PaaS Dienste abzielen
 	- koennen Azure-Aktivitätsprotokolle auch mithilfe der nativen Integration in Microsoft Defender für Cloud Apps auf Anomalien untersuchen
 - Azure-Datendienste
 	- enthält Funktionen mit denen Daten automatisch in Azure SQL klassifizieren werden koennen

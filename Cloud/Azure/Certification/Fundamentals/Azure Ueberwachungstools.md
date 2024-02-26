@@ -2,7 +2,7 @@
 
 ## Azure Adivsor
 
-- wertet Azure-Ressourcen aus und stellt Empfehlungen bereit, dabei zu unterstützen, die Zuverlässigkeit, Sicherheit und Leistung zu verbessern
+- wertet Azure-Ressourcen aus und stellt Empfehlungen bereit, unterstützung von Zuverlässigkeit, Sicherheit und Leistung
 
 Empfehlungskategorien:
 

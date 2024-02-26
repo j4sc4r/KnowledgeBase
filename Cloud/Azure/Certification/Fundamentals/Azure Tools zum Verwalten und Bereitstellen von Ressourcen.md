@@ -29,7 +29,7 @@ Mithilfe von Azure Resource Manager (ARM) und Arc können Sie Ihre Azure-Complia
 - Infrastruktur wird ueber deklarative Vorlagen mithilfe einer JSON verwaltet
 - können Lösung während des Entwicklungszyklus erneut bereitstellen und sicher sein, dass Ressourcen in einem konsistenten Zustand bereitgestellt werden
 - Abhängigkeiten zwischen Ressourcen definieren
-- Anwendn von Zugriffssteuerung auf alle Dienste, da RBAC nativ in die Verwaltungsplattform integriert ist
+- Anwendung von Zugriffssteuerung auf alle Dienste, da RBAC nativ in die Verwaltungsplattform integriert ist
 - Anwenden von Tags auf Ressourcen
 - genauere Informationen zur Abrechnung Ihrer Organisation erhalten
 
@@ -40,8 +40,8 @@ Mithilfe von Azure Resource Manager (ARM) und Arc können Sie Ihre Azure-Complia
 
 ### ARM-Vorlagen
 
-- können die Ressourcen, die verwendet werden, in einem deklarativen JSON-Format beschrieben
-- wird der Bereitstellungscode überprüft, bevor Code ausgeführt wird
+- können die Ressourcen, die verwendet werden, in einem deklarativen JSON-Format beschreiben
+- Bereitstellungscode wird überprüft, bevor Code ausgeführt wird
 
 Vorteile:
 
