@@ -1,0 +1,1 @@
+# Verwenden von Azure Resource Manager
