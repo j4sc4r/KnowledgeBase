@@ -37,11 +37,11 @@
 
 ### Create a Resource Group in Azure PowerShell
 
-- set  current location 
+- set  current location variable
 ```powershell
 $location = (Get-AzResourceGroup -Name <Name>).Location
 ```
-- set resource group name
+- set resource group name variable
 ```powershell
 $rgname = '<name>'
 ```
@@ -71,7 +71,7 @@ $diskConfig = New-AzDiskConfig `
 -DiskSizeGB 32 `
 -Sku Standard_LRS
 ```
-- set name of disk
+- set name of disk variable
 ```powershell
 $diskName = '<Name>'
 ```
