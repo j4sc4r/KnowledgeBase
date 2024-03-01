@@ -10,3 +10,6 @@ https://learn.microsoft.com/en-us/credentials/certifications/exam-scoring-report
 
 Online exams with Pearson VUE
 https://learn.microsoft.com/en-us/credentials/certifications/online-exams
+
+Labs
+https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/

@@ -1,4 +1,4 @@
-# AZ-104 - 2 - Identities und Governance
+# AZ - 104 - 2 - Identities und Governance
 
 [Was ist Entra ID](https://learn.microsoft.com/en-us/entra/fundamentals/whatis)
 
@@ -25,7 +25,7 @@
 	- einheitlicher Satz von Benutzern, Gruppen, Anmeldeinformationen und Geräten in verschiedenen Umgebungen
 - Schutz vertraulicher Daten
 - Self-Service-Support
-- Benutzt API Schnittstelle
+- Benutzt REST-API Schnittstelle
 	- HTTP/HTTPS Schnittstelle
 		- OIDC
 		- OAuth
@@ -44,7 +44,7 @@
 - Microsoft Entra-Konto
 	- ist eine ueber Entra ID erstellte Identität
 	- Identitäten werden in Microsoft Entra ID gespeichert und sind für die Clouddienstabonnements Ihrer Organisation zugänglich
-- Azure-Mandant (Verzeichnis)
+- Azure-Mandant (Verzeichnis/Tenant)
 	- einzelne vertrauenswuerdige Instanz von Entra ID
 	- jedes Mandant ist eigene Organisation
 - Azure-Abonnement
@@ -81,3 +81,71 @@ Was koennen die Versionen von Entra ID, was die freie Version nicht kann.
 
 Ab Version P1 ist der Self-Service-Kennwortzurücksetzung (SSPR) inbegriffen.
 
+# Benutzer und Gruppen
+
+## Benutzer
+
+- jeder Benutzer benoetigt ein Azure-Benutzerkonto
+- 3 Arten: 
+	- Cloudidentitaet
+		- Entra ID definierter Cloud Benutzer und teiler der eigenen Organisation
+	- Verzeichnissynchrone Identitaeten
+		- Lokal AD DS definierter Benutzer die ueber Entra Connect mit der Cloud verbunden werden
+	- Gastbenutzer
+		- definition ausserhalb von Azure
+		- koennen externe Anbieter oder Auftraggeber sein
+- funktion fuer Massennutzer bereitstellung
+
+## Gruppen
+
+- 2 Arten von Gruppen:
+	- Sicherheitsgruppe
+		- Verwaltung von Zugriffen und Resource Freigaben
+	- MS365-Gruppe
+		- Zugriff auf MS365 Apps (Sharepoint, Outlook, usw.)
+- 3 Arten von Gruppenzuweisungen:
+	- Zugewiesen
+		- Benutzer manuell der Gruppe zuweisen
+	- Dynamischer Benutzer
+		- automatisches hinzufuegen durch attribute des Users
+	- Dynamisches Geraet
+		- automatisches hinzufuegen durch attribute des Geraets
+
+## Verwaltungsgruppen (Management Groups)
+
+Verwaltungsgruppen sind die Schicht uber den Abonnements. Es koennen hier auch Policies und Zugriffssteuerung verwendet werden.
+Abonnements erben die Policies und Zugriffsrechte der Verwaltungsgruppe.
+
+### Bedenken bei der Benutzung von Verwaltungsgruppen
+
+- benutzerdefinierte Hierarchien
+- Vererbung von Richtlinien
+	- Abonnements vererben Richtlinien
+	- Begrenzung aller Ressourcen auf eine bestimmte Region
+- Compliance-Regeln
+- Kostenberichterstattung
+
+# Abonnements (Subscriptions)
+
+Azure-Abonnement ist eine logische Einheit von Azure-Diensten, die mit einem Azure-Konto verknüpft ist. 
+Das Azurekonto ist eine Entra ID Identitaet oder ein Verzeichnis/Tenant was Entra ID vertrauenswuerdig ist. 
+
+- Mehrere Abonnements können mit demselben Azure-Konto verknüpft werden.
+- Mehrere Azure-Konten können mit demselben Abonnement verknüpft werden.
+- Die Abrechnung für Azure-Dienste erfolgt auf Abonnementbasis.
+
+# Microsoft Cost Management
+
+**Tools:**
+- Kostenanalyse
+- Budgetoptionen
+- Empfehlungen fuer Kosteneinsparung
+- Exportieren von Kostendaten
+
+# Resource Tags
+
+Wird fuer die logische Kategorisierung von Azure-Resources benutzt.
+Mit Tags kann sortiert, durchsucht, verwaltet und analysiert werden.
+
+- maximal 50 Tagname-Wert-Paare pro Resource / Resource Group
+- Tags werden nicht vererbt
