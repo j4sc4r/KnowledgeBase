@@ -1,4 +1,4 @@
-# Add local Repository to Github
+# Create local repository and add it to Github
 
 ## Create local repository 
 
@@ -24,6 +24,9 @@ git commit -m "<commit message>"
 ## Add remote repository
 
 ```bash 
+git remote add <name> <URL e.g. https://github.com/username/repository.git>
+
+#example
 git remote add origin <URL e.g. https://github.com/username/repository.git>
 ```
 
