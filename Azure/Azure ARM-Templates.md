@@ -37,7 +37,7 @@ Standard JSON Struktur fuer ein ARM-Template:
 **Beispiel VM**
 Zu einer VM gehoeren zusaetzlich die OsDisk, das Network Interface und die VM selber
 ```json
-# Network interface
+// Network interface
 {
 
             "name": "[concat(parameters('vmName'), copyIndex(), '-nic')]",
@@ -71,7 +71,7 @@ Zu einer VM gehoeren zusaetzlich die OsDisk, das Network Interface und die VM se
             }
 
         },
-# VM
+// VM
 {
             "name": "[concat(parameters('vmName'), copyIndex())]",
             "type": "Microsoft.Compute/virtualMachines",
@@ -100,7 +100,7 @@ Zu einer VM gehoeren zusaetzlich die OsDisk, das Network Interface und die VM se
                         "sku": "16.04-LTS",
                         "version": "latest"
                     },
-# OS-Disk
+// OS-Disk
                     "osDisk": {
                         "name": "[concat(parameters('vmName'), copyIndex(), '-disk')]",
                         "caching": "ReadWrite",
@@ -121,7 +121,7 @@ Zu einer VM gehoeren zusaetzlich die OsDisk, das Network Interface und die VM se
 **Beispiel Storage**
 Hier wird ein Storage account + FileShare bereitgestellt
 ```json
-# Storage account
+// Storage account
 "resources": [
         {
             "name": "[parameters('storageAccountName')]",
@@ -134,7 +134,7 @@ Hier wird ein Storage account + FileShare bereitgestellt
                 "tier": "Standard"
             }
         },
-# File share        
+// File share        
         {
             "type": "Microsoft.Storage/storageAccounts/fileServices/shares",
             "apiVersion": "2023-01-01",
@@ -157,14 +157,14 @@ Hier wird ein Storage account + FileShare bereitgestellt
 
 ```json
     "parameters": {
-# Storage account name 
+// Storage account name 
         "storageAccountName": {
             "type": "string",
             "metadata": {
                 "description": "Name of the storage account"
             }
         },
-# File share name         
+// File share name         
         "FileShareName": {
             "type": "string",
             "metadata": {
@@ -179,7 +179,7 @@ Hier wird ein Storage account + FileShare bereitgestellt
 ```json
 "resources": [
         {
-            "name": "[parameters('storageAccountName')]", <---- Storage name
+            "name": "[parameters('storageAccountName')]", //<---- Storage name
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2023-01-01",
             "location": "[resourceGroup().location]",
@@ -189,13 +189,13 @@ Hier wird ein Storage account + FileShare bereitgestellt
                 "tier": "Standard"
             }
         },
-# File share        
+// File share        
         {
             "type": "Microsoft.Storage/storageAccounts/fileServices/shares",
             "apiVersion": "2023-01-01",
-            "name": "[concat(parameters('storageAccountName'), '/default/', parameters('fileShareName'))]",  <---- File share name mit extra beschriftung
+            "name": "[concat(parameters('storageAccountName'), '/default/', parameters('fileShareName'))]",  //<---- File share name mit extra beschriftung
             "dependsOn": [
-                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccountName'))]"  <---- storageAccountName
+                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccountName'))]"  //<---- storageAccountName
             ],
             "properties": {
                 "shareQuota": 5
