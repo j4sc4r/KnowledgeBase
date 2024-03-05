@@ -2,8 +2,8 @@
 
 ## Resource Groups 
 
-Resource Groups are a logical collection of resources.
-Resource groups store metadata of resources. 
+Resource Groups sind die logische Sammlung von Resourcen
+Resource groups beinhalten Metadaten der Resourcen. 
 
 - Resourcen koennen nur in einer resource group existieren
 - Resource Groups koennen nicht umbenannt werden
