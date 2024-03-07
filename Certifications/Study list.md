@@ -58,30 +58,30 @@
 
 #### Configure and manage storage accounts
 
-- Create and configure storage accounts
+- Create and configure storage accounts (X)
     
-- Configure Azure Storage redundancy
+- Configure Azure Storage redundancy (X)
     
-- Configure object replication
+- Configure object replication 
     
 - Configure storage account encryption
     
-- Manage data by using Azure Storage Explorer and AzCopy
+- Manage data by using Azure Storage Explorer and AzCopy (X)
     
 
 #### Configure Azure Files and Azure Blob Storage
 
 - Create and configure a file share in Azure Storage
     
-- Create and configure a container in Blob Storage
+- Create and configure a container in Blob Storage (X)
     
-- Configure storage tiers
+- Configure storage tiers (X)
     
 - Configure snapshots and soft delete for Azure Files
     
-- Configure blob lifecycle management
+- Configure blob lifecycle management (X)
     
-- Configure blob versioning
+- Configure blob versioning (X)
     
 
 ### Deploy and manage Azure compute resources (20–25%)

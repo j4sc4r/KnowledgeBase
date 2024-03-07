@@ -218,3 +218,20 @@ asynchrone Replikation von Containern über Regionen hinweg
 - AzCopy
 	- CLI Tool fuer Windows und Linux
 - Azure Data Factory
+
+## Storage sicherheit 
+
+### Shared Access Signatures (SAS)
+
+SAS stellt eine sichere Methode zur Freigabe Ihrer Speicherressourcen dar, ohne dass Sie Kompromisse bei der Sicherheit der Kontoschlüssel eingehen müssen.
+
+Gewaehrt Zugriff auf eine Resource fuer einen bestimmten Zeitraum. 
+
+- granulare Kontrolle
+- kann Zugriff auf mehrere Azure Storage Dienste gewaehren: Blobs, Files, Tables
+- kann Zeitintervall und Ablauf festlegen
+- kann Berechtigungen festlegen
+
+### Verschluesselung
+
+Die Azure Storage-Verschlüsselung ist für alle neuen und bestehenden Speicherkonten aktiviert und kann nicht deaktiviert werden.
