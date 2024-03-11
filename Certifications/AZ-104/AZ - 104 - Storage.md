@@ -232,6 +232,74 @@ Gewaehrt Zugriff auf eine Resource fuer einen bestimmten Zeitraum.
 - kann Zeitintervall und Ablauf festlegen
 - kann Berechtigungen festlegen
 
+drei Arten:  
+- Benutzerdelegation SAS  (User delegation SAS)
+	- nur für Blob, gesichert mit Azure AD  
+- Dienst SAS  (Service SAS)
+	- Speicherkonto-Schlüssel  
+	- für den Zugriff auf Blob, Queue, Tabelle oder Datei  
+- Konto SAS (Account SAS)
+	- gleich wie Service SAS  
+	- kann aber auch den Zugriff auf Operationen auf Dienstebene steuern, wie z. B. Get Service Stats
+
+SAS hat zwei Komponenten  
+- URI, die auf die Speicherressource verweist  
+- Token, das die Berechtigungen bestimmt
+
+Beispiel:
+`https://medicalrecords.blob.core.windows.net/patient-images/patient-116139-nq8z7f.jpg?sp=r&st=2020-01-20T11:42:32Z&se=2020-01-20T19:42:32Z&spr=https&sv=2019-02-02&sr=b&sig=SrW1HZ5Nb6MbRzTbXCaPm%2BJiSEn15tC91Y4umMPwVZs%3D`
+
+**uri** `https://medicalrecords.blob.core.windows.net/patient-images/patient-116139-nq8z7f.jpg?` **token** `sp=r&st=2020-01-20T11:42:32Z&se=2020-01-20T19:42:32Z&spr=https&sv=2019-02-02&sr=b&sig=SrW1HZ5Nb6MbRzTbXCaPm%2BJiSEn15tC91Y4umMPwVZs%3D`
+
+### Gespeicherte Zugriffsrichtlinie (stored access policy)
+
+Eine gespeicherte Zugriffsrichtlinie ist im Grunde eine Vorlage für die Erstellung von sas-Tokens. Sie können zum Beispiel den c#-Code verwenden, indem Sie einfach auf den Bezeichner verweisen und das Token erstellen.
+
+```c#
+// Create a user SAS that only allows reading for a minute
+BlobSasBuilder sas = new BlobSasBuilder
+{
+    Identifier = "stored access policy identifier"
+};
+```
+Kann für alle 4 Speichertypen verwendet werden: Blob, Datei, Warteschlange, Tabelle  
+
+Eigenschaften:
+- Bezeichner  
+	- Name  
+- Startzeit  
+- Verfallszeit  
+- Berechtigungen
+
 ### Verschluesselung
 
 Die Azure Storage-Verschlüsselung ist für alle neuen und bestehenden Speicherkonten aktiviert und kann nicht deaktiviert werden.
+
+# Azure Files 
+
+- Speichert Daten als echte Verzeichnisobjekte in Dateifreigaben
+- bietet gemeinsamen Zugriff auf Dateien über mehrere VMs hinweg. Beliebig viele Azure-VMs oder -Rollen können eine Azure-Dateifreigabe gleichzeitig einbinden und darauf zugreifen.
+- Azure Files bietet vollständig verwaltete Dateifreigaben in der Cloud. Azure-Dateifreigaben können gleichzeitig durch die Cloud oder lokale Bereitstellungen von Windows, Linux und macOS eingebunden werden.
+
+## Dateifreigabensnapshots (momentaufnahmen)
+
+- Sind inkrementell --> werden nur die Daten gespeichert, die seit der letzten Momentaufnahme der Freigabe geändert wurden
+- wird auf Dateifreigabeebene bereitgestellt
+- zur Wiederherstellung der Freigabe muss nur die jüngste Momentaufnahme der Freigabe aufbewahrt werden
+
+## Dateisynchronisierung
+
+- verwandelt Windows Server in einen schnellen Cache für Ihre Azure-Dateifreigaben
+- unterstützt so viele Caches wie Sie auf der ganzen Welt benötigen
+
+# Azure-Speicher-Tools  
+
+- Azure-Speicher-Explorer   
+	- Gui-Tool  
+	- Benötigt kein Azure Portal
+- AzCopy 
+	- cli  
+	- kann im Hintergrund laufen  
+- Azure-Import/Export-Dienst  
+	- Physikalisches Senden von Festplatten, die in/aus einem Speicherkonto übertragen werden sollen
+- 
