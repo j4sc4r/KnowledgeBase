@@ -94,3 +94,19 @@ Sie muss ausgetauscht werden, um die Instanz in der Produktion einzusetzen. Dies
     - Verwalten der authentifizierten Sitzung
     - Einfügen von Identitätsinformationen in Anforderungsheader
 
+# Azure Container Service/Instances
+
+Windows oder Linux "Container als Dienst"  
+Ein Container ist in Sekundenschnelle einsatzbereit.  
+- Container-Gruppe 
+- teilen sich einen Lebenszyklus, Ressourcen, ein lokales Netzwerk und Speichervolumen.
+
+## Container
+
+- Instanz eines Docker-Images  
+- Ausführung einer einzelnen Anwendung, eines Prozesses oder Dienstes  
+- besteht aus 
+	- Docker-Image  
+	- Ausführungsumgebung  
+	- einem standardisierten Satz von Anweisungen 
+- Skalierung durch Erstellung mehrerer Instanzen desselben Abbilds
