@@ -1,4 +1,4 @@
-# AZ - 104 - Deploy Compute resources
+# AZ - 104 - 4 - Deploy Compute resources
 
 # VM - Groesse (VM - Size)
 

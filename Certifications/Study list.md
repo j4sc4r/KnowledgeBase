@@ -26,7 +26,7 @@
 
 #### Manage Azure subscriptions and governance
 
-- Implement and manage Azure Policy
+- Implement and manage Azure Policy (X)
     
 - Configure resource locks (X)
     
@@ -47,7 +47,7 @@
 
 - Configure Azure Storage firewalls and virtual networks
     
-- Create and use shared access signature (SAS) tokens
+- Create and use shared access signature (SAS) tokens (X)
     
 - Configure stored access policies
     
@@ -71,7 +71,7 @@
 
 #### Configure Azure Files and Azure Blob Storage
 
-- Create and configure a file share in Azure Storage
+- Create and configure a file share in Azure Storage (X)
     
 - Create and configure a container in Blob Storage (X)
     
@@ -101,56 +101,56 @@
 
 #### Create and configure virtual machines
 
-- Create a virtual machine
+- Create a virtual machine (X)
     
-- Configure Azure Disk Encryption
+- Configure Azure Disk Encryption (X)
     
-- Move a virtual machine to another resource group, subscription, or region
+- Move a virtual machine to another resource group, subscription, or region (X)
     
-- Manage virtual machine sizes
+- Manage virtual machine sizes (X)
     
-- Manage virtual machine disks
+- Manage virtual machine disks (X)
     
-- Deploy virtual machines to availability zones and availability sets
+- Deploy virtual machines to availability zones and availability sets (X)
     
-- Deploy and configure an Azure Virtual Machine Scale Sets
+- Deploy and configure an Azure Virtual Machine Scale Sets (X)
     
 
 #### Provision and manage containers in the Azure portal
 
 - Create and manage an Azure container registry
     
-- Provision a container by using Azure Container Instances
+- Provision a container by using Azure Container Instances (X)
     
-- Provision a container by using Azure Container Apps
+- Provision a container by using Azure Container Apps (X)
     
-- Manage sizing and scaling for containers, including Azure Container Instances and Azure Container Apps
+- Manage sizing and scaling for containers, including Azure Container Instances and Azure Container Apps (X)
     
 
 ### Create and configure Azure App Service
 
-- Provision an App Service plan
+- Provision an App Service plan (X)
     
-- Configure scaling for an App Service plan
+- Configure scaling for an App Service plan (X)
     
-- Create an App Service
+- Create an App Service (X)
     
 - Configure certificates and Transport Layer Security (TLS) for an App Service
     
-- Map an existing custom DNS name to an App Service
+- Map an existing custom DNS name to an App Service (X)
     
 - Configure backup for an App Service
     
-- Configure networking settings for an App Service
+- Configure networking settings for an App Service 
     
-- Configure deployment slots for an App Service
+- Configure deployment slots for an App Service (X)
     
 
 ### Implement and manage virtual networking (15–20%)
 
 #### Configure and manage virtual networks in Azure
 
-- Create and configure virtual networks and subnets
+- Create and configure virtual networks and subnets (X)
     
 - Create and configure virtual network peering
     
