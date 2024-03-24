@@ -152,20 +152,20 @@
 
 - Create and configure virtual networks and subnets (X)
     
-- Create and configure virtual network peering
+- Create and configure virtual network peering (X)
     
-- Configure public IP addresses
+- Configure public IP addresses (X)
     
-- Configure user-defined network routes
+- Configure user-defined network routes 
     
-- Troubleshoot network connectivity
+- Troubleshoot network connectivity (X)
     
 
 #### Configure secure access to virtual networks
 
-- Create and configure network security groups (NSGs) and application security groups
+- Create and configure network security groups (NSGs) and application security groups (X)
     
-- Evaluate effective security rules in NSGs
+- Evaluate effective security rules in NSGs (X)
     
 - Implement Azure Bastion
     
@@ -178,7 +178,7 @@
 
 - Configure Azure DNS
     
-- Configure an internal or public load balancer
+- Configure an internal or public load balancer (X)
     
 - Troubleshoot load balancing
     
